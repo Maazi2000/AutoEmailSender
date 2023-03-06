@@ -1,8 +1,11 @@
-from os import getenv
-from dotenv import load_dotenv
+import sqlite3
+from database import Database
 
+connection = sqlite3.Connection('Database.db')
 
-# load environment variables from .env file
-load_dotenv()
-print(getenv("FIRST_NAME"))
-# establish connection
+with Database(connection) as database:
+    database.cursor.execute('''CREATE TABLE borows(
+        id integer primary key autoincrement,
+        name text,
+        book_title text,
+        book_return_at date)''')

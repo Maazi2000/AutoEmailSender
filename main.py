@@ -30,10 +30,10 @@ credentials = Credentials(username, password)
 def send_reminder_to_borrower(borower):
     #Function which send reminder email to a borrower
     template = Template('''Hello!
-    I would like to ask forgiving away my book
-    titled $title Return date has 
-    passed $book_return_at
-    ''')
+        The time for borrowing your book $title 
+        has passed $book_return_at
+        Please return it to me.
+        ''')
 
     text = template.substitute({
         'name': borower.name,

@@ -3,3 +3,6 @@ The program allows you to send e-mails with reminders to people from the databas
 
 # Run
 To run this app you should clone this repository and create .env file just like .env.example
+
+-
+project inspired by [pycamp.pl](https://www.pycamp.pl/)
